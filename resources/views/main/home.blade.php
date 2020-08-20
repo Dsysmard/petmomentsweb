@@ -55,6 +55,25 @@
 			 </div>
 			 </div>
 		</div>
+
+		<div class="jumbotron text-center products-container">
+		<div class="label-primary text-center alert">
+			<h1>CONOCE NUESTROS PRODUCTOS</h1>
+			<p>
+				<h4>quieres un producto de "PETMOMENTS", Que esperas? Adquierelo YA! y paga con PAYPAL, VISA o MasterCard</h4>
+			</p>
+		</div>	 
+				<div class="row">
+					 @foreach($products as $product)
+					 <div class="col-xs-10 col-sm-6">
+					 	@include("products.product",["product" => $product])
+					 </div>
+					 @endforeach
+				</div>
+					 <div>
+						
+					</div>	 
+		</div>
  	</section>
  </div>
 

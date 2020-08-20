@@ -23,7 +23,16 @@
 						<td>{{ $product->title }}</td>
 						<td>{{ $product->description }}</td>
 						<td>{{ $product->pricing }}</td>
-						<td>Acciones</td>
+						<td align="center">
+							<a class="btn btn-info" href="{{url("/products/$product->id")}}">
+								VER
+							</a>
+
+							<a class="btn btn-success" href="{{url('/products/' .$product->id. '/edit')}}">
+								EDITAR
+							</a>
+							@include('products.delete', ['product' => $product])
+						</td>
 					</tr>
 				@endforeach
 			</tbody>
